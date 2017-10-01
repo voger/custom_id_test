@@ -4,7 +4,7 @@ defmodule CustomIdTest.Context do
 
   def create_entry(params) do
    EntryFragment.create_changeset(%EntryFragment{}, params)
-   |> Repo.insert()
+   |> Repo.insert(returning: true)
  end
 
   def get_entries(), do: Repo.all(EntryFragment)
