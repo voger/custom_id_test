@@ -1,0 +1,27 @@
+<h2>Listing Things with changeset</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Entry</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for thing_wih_changeset <- @things_with_changeset do %>
+    <tr>
+      <td><%= thing_wih_changeset.id %></td>
+      <td><%= thing_wih_changeset.entry %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: thing_wih_changeset_path(@conn, :show, thing_wih_changeset), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: thing_wih_changeset_path(@conn, :edit, thing_wih_changeset), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: thing_wih_changeset_path(@conn, :delete, thing_wih_changeset), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Thing wih changeset", to: thing_wih_changeset_path(@conn, :new) %></span>

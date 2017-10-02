@@ -1,0 +1,5 @@
+<h2>Edit Thing wih changeset</h2>
+
+<%= render "form.html", Map.put(assigns, :action, thing_wih_changeset_path(@conn, :update, @thing_wih_changeset)) %>
+
+<span><%= link "Back", to: thing_wih_changeset_path(@conn, :index) %></span>

@@ -1,0 +1,5 @@
+<h2>New Thing wih changeset</h2>
+
+<%= render "form.html", Map.put(assigns, :action, thing_wih_changeset_path(@conn, :create)) %>
+
+<span><%= link "Back", to: thing_wih_changeset_path(@conn, :index) %></span>

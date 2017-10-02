@@ -1,0 +1,13 @@
+<h2>Show Thing wih changeset</h2>
+
+<ul>
+
+
+  <li>
+    <strong>Entry:</strong><br>
+    <strong>ID: </strong><%= @thing_wih_changeset.id %> <strong>Entry: </strong><%= @thing_wih_changeset.entry %>
+  </li>
+</ul>
+
+<span><%= link "Edit", to: thing_wih_changeset_path(@conn, :edit, @thing_wih_changeset) %></span>
+<span><%= link "Back", to: thing_wih_changeset_path(@conn, :index) %></span>
